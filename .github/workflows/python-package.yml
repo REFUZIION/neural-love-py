@@ -1,4 +1,4 @@
-name: Python application test with Unittest
+name: Test application with Unittest
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
+    - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
@@ -22,4 +22,5 @@ jobs:
         pip install -r requirements.txt
     - name: Run tests with Unittest
       run: |
+        cd tests/
         python -m unittest discover
