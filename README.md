@@ -16,6 +16,8 @@ Soon to be available on PyPI:
 pip install neural-love-api
 ```
 
+## Usage
+
 Create an instance of the API wrapper.
 
 ```python
