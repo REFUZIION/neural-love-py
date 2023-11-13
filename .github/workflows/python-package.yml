@@ -9,6 +9,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./neural_love_api
 
     steps:
     - uses: actions/checkout@v2
@@ -19,8 +22,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -e .
+
     - name: Run tests with Unittest
+      shell: bash
       run: |
-        cd tests/
-        python -m unittest discover
+        python -m unittest discover ../tests
