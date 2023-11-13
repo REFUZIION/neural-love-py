@@ -1,0 +1,13 @@
+pycache/
+*.pytest_cache/
+.idea/
+*.py[cod]
+*.pyc
+*.log
+*.sqlite3
+*.sqlite
+.env
+!.gitignore
+*env.py
+*env.pyc
+.env.
